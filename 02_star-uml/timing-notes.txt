@@ -1,0 +1,4 @@
+Create base model entities: 12m34s
+Create full packge set: 30m43s
+Generate Code: 54s
+Total time in tool: 44m12s
