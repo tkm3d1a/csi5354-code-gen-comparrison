@@ -166,9 +166,6 @@ if [[ "$ANALYSIS_OUTPUT" == true ]]; then
     echo "total_imports,$TOTAL_IMPORTS" >> "$METRICS_CSV"
     echo "unique_imports,$UNIQUE_IMPORTS" >> "$METRICS_CSV"
     echo "static_imports,$STATIC_IMPORTS" >> "$METRICS_CSV"
-    echo "java_imports,$JAVA_IMPORTS" >> "$METRICS_CSV"
-    echo "javax_imports,$JAVAX_IMPORTS" >> "$METRICS_CSV"
-    echo "spring_imports,$SPRING_IMPORTS" >> "$METRICS_CSV"
     
     # Detailed import list
     find . -name "*.java" -not -path "*/target/*" -exec grep -h "^import " {} + 2>/dev/null \
@@ -228,12 +225,25 @@ find . -name "*.java" -not -path "*/target/*" -exec grep -ohE "^\s*@\w+" {} + 2>
     | while read count annotation; do
         printf "  %5d  %s\n" "$count" "$annotation"
     done
+echo -e "${YELLOW}Annotation Breakdown by Category:${NC}"
+
+# Spring annotations
+SPRING_ANNOT=$(find . -name "*.java" -not -path "*/target/*" -exec grep -ohE "^\s*@(Controller|RestController|Service|Repository|Component|Autowired|Bean|Configuration|RequestMapping|GetMapping|PostMapping|PutMapping|DeleteMapping|PathVariable|RequestBody|RequestParam|Value|Qualifier)" {} + 2>/dev/null | wc -l)
+
+# JPA/Hibernate annotations
+JPA_ANNOT=$(find . -name "*.java" -not -path "*/target/*" -exec grep -ohE "^\s*@(Entity|Table|Column|Id|GeneratedValue|OneToMany|ManyToOne|ManyToMany|OneToOne|JoinColumn|Transient)" {} + 2>/dev/null | wc -l)
+
+# Standard Java annotations
+JAVA_ANNOT=$(find . -name "*.java" -not -path "*/target/*" -exec grep -ohE "^\s*@(Override|Deprecated|SuppressWarnings|FunctionalInterface)" {} + 2>/dev/null | wc -l)
+
+echo -e "  ${CYAN}Spring Framework:${NC}          $SPRING_ANNOT"
+echo -e "  ${CYAN}JPA/Hibernate:${NC}             $JPA_ANNOT"
+echo -e "  ${CYAN}Standard Java:${NC}             $JAVA_ANNOT"
 
 if [[ "$ANALYSIS_OUTPUT" == true ]]; then
     echo "total_annotations,$TOTAL_ANNOTATIONS" >> "$METRICS_CSV"
     echo "spring_annotations,$SPRING_ANNOT" >> "$METRICS_CSV"
     echo "jpa_annotations,$JPA_ANNOT" >> "$METRICS_CSV"
-    echo "test_annotations,$TEST_ANNOT" >> "$METRICS_CSV"
     echo "java_annotations,$JAVA_ANNOT" >> "$METRICS_CSV"
     
     # Detailed annotation list
@@ -280,8 +290,6 @@ fi
 
 if [[ "$ANALYSIS_OUTPUT" == true ]]; then
     echo "total_dependencies,$TOTAL_DEPS" >> "$METRICS_CSV"
-    echo "test_dependencies,$TEST_DEPS" >> "$METRICS_CSV"
-    echo "provided_dependencies,$PROVIDED_DEPS" >> "$METRICS_CSV"
     echo "maven_plugins,$TOTAL_PLUGINS" >> "$METRICS_CSV"
 fi
 
