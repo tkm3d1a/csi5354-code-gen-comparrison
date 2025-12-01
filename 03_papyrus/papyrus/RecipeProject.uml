@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Codegen="http://www.eclipse.org/papyrus/Codegen/1" xmlns:SpringProfile="http:///schemas/SpringProfile/_5KKuEM5EEfCMkp374_T-Sw/4" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/SpringProfile/_5KKuEM5EEfCMkp374_T-Sw/4 SpringProfile.profile.uml#_5KKuEc5EEfCMkp374_T-Sw">
+  <uml:Model xmi:id="_4115UM5DEfCi8YUAud3MBg" name="RecipeProject">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_43cb0M5DEfCi8YUAud3MBg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_XcXkcM5JEfCF35oGXX2VfQ">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_d-spAM5JEfCF35oGXX2VfQ">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_BBH4sM5EEfCMkp374_T-Sw" name="com.tkforgeworks.RecipeProject.model">
+      <packagedElement xmi:type="uml:Class" xmi:id="_JBH1IM5EEfCMkp374_T-Sw" name="User">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_I5Xx4M5FEfCMkp374_T-Sw" name="id" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VS2QAM5FEfCMkp374_T-Sw" name="name" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YmKa4M5FEfCMkp374_T-Sw" name="email" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_CXj1QM5GEfCMkp374_T-Sw" name="getID">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_0kdcUM5GEfCMkp374_T-Sw" name="" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_9ri8oM5GEfCMkp374_T-Sw" name="setId">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_AOT0UM5HEfCMkp374_T-Sw" name="id" effect="update">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_TfX1UM5HEfCMkp374_T-Sw" name="getName">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZDCSMM5HEfCMkp374_T-Sw" name="" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_TwZ68M5HEfCMkp374_T-Sw" name="setName">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_c3yWMM5HEfCMkp374_T-Sw" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_T-k50M5HEfCMkp374_T-Sw" name="getEmail">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_fYAQMM5HEfCMkp374_T-Sw" name="" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_UWUrcM5HEfCMkp374_T-Sw" name="setEmail">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_jydpUM5HEfCMkp374_T-Sw" name="email">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_BbN-QM5FEfCMkp374_T-Sw" name="Recipe">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_b6OMoM5FEfCMkp374_T-Sw" name="id" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xckTwM5FEfCMkp374_T-Sw" name="name" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_yETpMM5FEfCMkp374_T-Sw" name="description" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_2vaGYM5FEfCMkp374_T-Sw" name="category" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_oprP4M5HEfCMkp374_T-Sw" name="getID">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_oprP4c5HEfCMkp374_T-Sw" name="" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_pBTswM5HEfCMkp374_T-Sw" name="setId">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_pBTswc5HEfCMkp374_T-Sw" name="id" effect="update">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_pe19UM5HEfCMkp374_T-Sw" name="getName">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_pe2kYM5HEfCMkp374_T-Sw" name="" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_p1C20M5HEfCMkp374_T-Sw" name="setName">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_p1C20c5HEfCMkp374_T-Sw" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_r-lWMM5HEfCMkp374_T-Sw" name="getDescription">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_r-lWMc5HEfCMkp374_T-Sw" name="" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_uI4DgM5HEfCMkp374_T-Sw" name="setDescription">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_uI4Dgc5HEfCMkp374_T-Sw" name="description">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_w88GkM5HEfCMkp374_T-Sw" name="getCategory">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_w88Gkc5HEfCMkp374_T-Sw" name="" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_w88Gks5HEfCMkp374_T-Sw" name="setCategory">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_w88Gk85HEfCMkp374_T-Sw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_XxJZwGx-Eey_s9B0BvHgkw"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_5dB4UM5HEfCMkp374_T-Sw" name="getSkillLevel">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_7I_D0M5HEfCMkp374_T-Sw" name="" type="_D1MtYM5FEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_-AOWsM5HEfCMkp374_T-Sw" name="setSkillLevel">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="__VoDYM5HEfCMkp374_T-Sw" name="skillLevel" type="_D1MtYM5FEfCMkp374_T-Sw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_CiMGAM5IEfCMkp374_T-Sw" name="getCreatedBy">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_DvcjUM5IEfCMkp374_T-Sw" name="" type="_JBH1IM5EEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_HdQR0M5IEfCMkp374_T-Sw" name="setCreatedBy">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_IlN_cM5IEfCMkp374_T-Sw" name="createdBy" type="_JBH1IM5EEfCMkp374_T-Sw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_D1MtYM5FEfCMkp374_T-Sw" name="SkillLevel">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Es6YgM5FEfCMkp374_T-Sw" name="PRO"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FQ-H0M5FEfCMkp374_T-Sw" name="HOME_CHEF"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_47hYoM5FEfCMkp374_T-Sw" name="LINE_COOK"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_73pLgM5FEfCMkp374_T-Sw" name="AMATEUR"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_L45BkM5GEfCMkp374_T-Sw" memberEnd="_L496EM5GEfCMkp374_T-Sw _L4-hIM5GEfCMkp374_T-Sw" navigableOwnedEnd="_L496EM5GEfCMkp374_T-Sw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_L49TAM5GEfCMkp374_T-Sw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_L49TAc5GEfCMkp374_T-Sw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_L496EM5GEfCMkp374_T-Sw" name="skilllevel" visibility="private" type="_D1MtYM5FEfCMkp374_T-Sw" association="_L45BkM5GEfCMkp374_T-Sw"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_L4-hIM5GEfCMkp374_T-Sw" name="recipe" visibility="private" type="_BbN-QM5FEfCMkp374_T-Sw" association="_L45BkM5GEfCMkp374_T-Sw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_NBfoYM5GEfCMkp374_T-Sw" visibility="private" memberEnd="_NBg2gM5GEfCMkp374_T-Sw _NBg2gc5GEfCMkp374_T-Sw" navigableOwnedEnd="_NBg2gM5GEfCMkp374_T-Sw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NBgPcM5GEfCMkp374_T-Sw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NBgPcc5GEfCMkp374_T-Sw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_NBg2gM5GEfCMkp374_T-Sw" name="createdBy" visibility="private" type="_JBH1IM5EEfCMkp374_T-Sw" association="_NBfoYM5GEfCMkp374_T-Sw"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_NBg2gc5GEfCMkp374_T-Sw" name="recipe" visibility="private" type="_BbN-QM5FEfCMkp374_T-Sw" association="_NBfoYM5GEfCMkp374_T-Sw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QtTLwM5GEfCMkp374_T-Sw" name="LiteralInteger1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QtTLwc5GEfCMkp374_T-Sw" name="LiteralUnlimitedNatural1" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6FaOUM5EEfCMkp374_T-Sw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6FaOUc5EEfCMkp374_T-Sw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="SpringProfile.profile.uml#_5KKuEc5EEfCMkp374_T-Sw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="SpringProfile.profile.uml#_W-quEM5EEfCMkp374_T-Sw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DjQvMM5NEfCCWYtt6uEC9w" name="com.tkforgeworks.RecipeProject.controller">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_c_bnkM5NEfCCWYtt6uEC9w" client="_DjQvMM5NEfCCWYtt6uEC9w" supplier="_GS8BgM5NEfCCWYtt6uEC9w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_fKjbUM5NEfCCWYtt6uEC9w" client="_DjQvMM5NEfCCWYtt6uEC9w" supplier="_BBH4sM5EEfCMkp374_T-Sw"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TQ8TkM5OEfC9h7C3aSwWUw" name="RecipeController">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ipeHUM5PEfC9h7C3aSwWUw" name="recipeService" visibility="private" type="_XD_ucM5OEfC9h7C3aSwWUw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_kHH7oM5QEfC9h7C3aSwWUw" name="RecipeController">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ToD2QM5SEfC9h7C3aSwWUw" name="recipeService" type="_XD_ucM5OEfC9h7C3aSwWUw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_mo_bcM5QEfC9h7C3aSwWUw" name="findAll">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_tGj70M5QEfC9h7C3aSwWUw" name="" direction="return">
+            <type xmi:type="uml:Interface" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_K2iP8GMnEeydfJuFsrdeeg"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ndbJEM5QEfC9h7C3aSwWUw" name="findById">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_XUd2kM5SEfC9h7C3aSwWUw" name="recipeId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_OGI7QM5REfC9h7C3aSwWUw" name="recipe" type="_BbN-QM5FEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_opZM8M5QEfC9h7C3aSwWUw" name="update">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_cSCj0M5SEfC9h7C3aSwWUw" name="recipeId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_e24fIM5SEfC9h7C3aSwWUw" name="recipe" type="_BbN-QM5FEfCMkp374_T-Sw"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_5YFiYM5REfC9h7C3aSwWUw" name="" type="_BbN-QM5FEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_pn-8IM5QEfC9h7C3aSwWUw" name="create">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_iU1MsM5SEfC9h7C3aSwWUw" name="recipe" type="_BbN-QM5FEfCMkp374_T-Sw"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_kRuXMM5SEfC9h7C3aSwWUw" name="" type="_BbN-QM5FEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_qrXrwM5QEfC9h7C3aSwWUw" name="delete">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_m6M1UM5SEfC9h7C3aSwWUw" name="recipeId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Vnbp0M5OEfC9h7C3aSwWUw" name="UserController">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_NmmGQM5WEfC9h7C3aSwWUw" name="userService" visibility="private" type="_Y7usIM5OEfC9h7C3aSwWUw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_iv-TwM5WEfC9h7C3aSwWUw" name="UserController">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_o3_a4M5WEfC9h7C3aSwWUw" name="userService" type="_Y7usIM5OEfC9h7C3aSwWUw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hU6rAM5WEfC9h7C3aSwWUw" name="findAll">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hU6rAc5WEfC9h7C3aSwWUw" name="" direction="return">
+            <type xmi:type="uml:Interface" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_K2iP8GMnEeydfJuFsrdeeg"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_sk2uMM5WEfC9h7C3aSwWUw" name="findById">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_sk2uMc5WEfC9h7C3aSwWUw" name="userId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_sk2uMs5WEfC9h7C3aSwWUw" name="user" type="_JBH1IM5EEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_taEe8M5WEfC9h7C3aSwWUw" name="update">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_taEe8c5WEfC9h7C3aSwWUw" name="userId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_taEe8s5WEfC9h7C3aSwWUw" name="user" type="_JBH1IM5EEfCMkp374_T-Sw"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_taEe885WEfC9h7C3aSwWUw" name="" type="_JBH1IM5EEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_uPmYwM5WEfC9h7C3aSwWUw" name="create">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_uPmYwc5WEfC9h7C3aSwWUw" name="user" type="_JBH1IM5EEfCMkp374_T-Sw"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_uPmYws5WEfC9h7C3aSwWUw" name="" type="_JBH1IM5EEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ujtnkM5WEfC9h7C3aSwWUw" name="delete">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ujtnkc5WEfC9h7C3aSwWUw" name="userId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_4-pPAM5OEfC9h7C3aSwWUw" client="_TQ8TkM5OEfC9h7C3aSwWUw" supplier="_XD_ucM5OEfC9h7C3aSwWUw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_7l3I4M5OEfC9h7C3aSwWUw" client="_Vnbp0M5OEfC9h7C3aSwWUw" supplier="_Y7usIM5OEfC9h7C3aSwWUw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_9BJbIM5OEfC9h7C3aSwWUw" client="_TQ8TkM5OEfC9h7C3aSwWUw" supplier="_BbN-QM5FEfCMkp374_T-Sw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_-VCr8M5OEfC9h7C3aSwWUw" client="_Vnbp0M5OEfC9h7C3aSwWUw" supplier="_JBH1IM5EEfCMkp374_T-Sw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_GS8BgM5NEfCCWYtt6uEC9w" name="com.tkforgeworks.RecipeProject.service">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_d6IVQM5NEfCCWYtt6uEC9w" client="_GS8BgM5NEfCCWYtt6uEC9w" supplier="_IRqYAM5NEfCCWYtt6uEC9w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_hZrlUM5NEfCCWYtt6uEC9w" client="_GS8BgM5NEfCCWYtt6uEC9w" supplier="_BBH4sM5EEfCMkp374_T-Sw"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_XD_ucM5OEfC9h7C3aSwWUw" name="RecipeService">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_sKEMcM5SEfC9h7C3aSwWUw" name="recipeRepository" visibility="private" type="_awUPMM5OEfC9h7C3aSwWUw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Bst1kM5TEfC9h7C3aSwWUw" name="RecipeService">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Bst1kc5TEfC9h7C3aSwWUw" name="recipeRepository" type="_awUPMM5OEfC9h7C3aSwWUw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rn6hoM5SEfC9h7C3aSwWUw" name="findAll">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rn6hoc5SEfC9h7C3aSwWUw" name="" direction="return">
+            <type xmi:type="uml:Interface" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_K2iP8GMnEeydfJuFsrdeeg"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rn7vwM5SEfC9h7C3aSwWUw" name="create">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rn7vwc5SEfC9h7C3aSwWUw" name="recipe" type="_BbN-QM5FEfCMkp374_T-Sw"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rn7vws5SEfC9h7C3aSwWUw" name="" type="_BbN-QM5FEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rn7vw85SEfC9h7C3aSwWUw" name="update">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rn7vxM5SEfC9h7C3aSwWUw" name="recipeId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rn7vxc5SEfC9h7C3aSwWUw" name="recipe" type="_BbN-QM5FEfCMkp374_T-Sw"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rn7vxs5SEfC9h7C3aSwWUw" name="" type="_BbN-QM5FEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rn7vx85SEfC9h7C3aSwWUw" name="delete">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rn7vyM5SEfC9h7C3aSwWUw" name="recipeId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rn8W0M5SEfC9h7C3aSwWUw" name="findById">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rn8W0c5SEfC9h7C3aSwWUw" name="recipeId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rn8W0s5SEfC9h7C3aSwWUw" name="recipe" type="_BbN-QM5FEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Y7usIM5OEfC9h7C3aSwWUw" name="UserService">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_R4GXsM5WEfC9h7C3aSwWUw" name="userRepository" visibility="private" type="_dB3bEM5OEfC9h7C3aSwWUw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hvqk8M5kEfC9h7C3aSwWUw" name="UserService">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hvqk8c5kEfC9h7C3aSwWUw" name="userRepository" type="_dB3bEM5OEfC9h7C3aSwWUw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hnNU4M5WEfC9h7C3aSwWUw" name="findAll">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hnNU4c5WEfC9h7C3aSwWUw" name="" direction="return">
+            <type xmi:type="uml:Interface" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_K2iP8GMnEeydfJuFsrdeeg"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_eOlD0M5kEfC9h7C3aSwWUw" name="findById">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_eOlD0c5kEfC9h7C3aSwWUw" name="userId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_eOlD0s5kEfC9h7C3aSwWUw" name="user" type="_JBH1IM5EEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_gphcQM5kEfC9h7C3aSwWUw" name="update">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_gpiDUM5kEfC9h7C3aSwWUw" name="userId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_gpiDUc5kEfC9h7C3aSwWUw" name="user" type="_JBH1IM5EEfCMkp374_T-Sw"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_gpiDUs5kEfC9h7C3aSwWUw" name="" type="_JBH1IM5EEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hBlW8M5kEfC9h7C3aSwWUw" name="create">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hBlW8c5kEfC9h7C3aSwWUw" name="user" type="_JBH1IM5EEfCMkp374_T-Sw"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hBlW8s5kEfC9h7C3aSwWUw" name="" type="_JBH1IM5EEfCMkp374_T-Sw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hVwQIM5kEfC9h7C3aSwWUw" name="delete">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_hVwQIc5kEfC9h7C3aSwWUw" name="userId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_NeU5EPaLEeW5KOK8aDMdgA"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_5dmb4M5OEfC9h7C3aSwWUw" client="_XD_ucM5OEfC9h7C3aSwWUw" supplier="_awUPMM5OEfC9h7C3aSwWUw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_7GKVIM5OEfC9h7C3aSwWUw" client="_Y7usIM5OEfC9h7C3aSwWUw" supplier="_dB3bEM5OEfC9h7C3aSwWUw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_9vjZQM5OEfC9h7C3aSwWUw" client="_XD_ucM5OEfC9h7C3aSwWUw" supplier="_BbN-QM5FEfCMkp374_T-Sw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="__btZEM5OEfC9h7C3aSwWUw" client="_Y7usIM5OEfC9h7C3aSwWUw" supplier="_JBH1IM5EEfCMkp374_T-Sw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_IRqYAM5NEfCCWYtt6uEC9w" name="com.tkforgeworks.RecipeProject.repository">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ehgeUM5NEfCCWYtt6uEC9w" client="_IRqYAM5NEfCCWYtt6uEC9w" supplier="_BBH4sM5EEfCMkp374_T-Sw"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_awUPMM5OEfC9h7C3aSwWUw" name="RecipeRepository"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_dB3bEM5OEfC9h7C3aSwWUw" name="UserRepository"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_6S99oM5OEfC9h7C3aSwWUw" client="_awUPMM5OEfC9h7C3aSwWUw" supplier="_BbN-QM5FEfCMkp374_T-Sw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_6rkD0M5OEfC9h7C3aSwWUw" client="_dB3bEM5OEfC9h7C3aSwWUw" supplier="_JBH1IM5EEfCMkp374_T-Sw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AX8-4M5PEfC9h7C3aSwWUw" memberEnd="_AX_bIs5PEfC9h7C3aSwWUw _AYACMM5PEfC9h7C3aSwWUw" navigableOwnedEnd="_AX_bIs5PEfC9h7C3aSwWUw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AX_bIM5PEfC9h7C3aSwWUw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AX_bIc5PEfC9h7C3aSwWUw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_AX_bIs5PEfC9h7C3aSwWUw" name="createdBy" type="_JBH1IM5EEfCMkp374_T-Sw" association="_AX8-4M5PEfC9h7C3aSwWUw"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_AYACMM5PEfC9h7C3aSwWUw" name="recipe" type="_BbN-QM5FEfCMkp374_T-Sw" association="_AX8-4M5PEfC9h7C3aSwWUw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UT8MMM5PEfC9h7C3aSwWUw" name="LiteralInteger1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UT_PgM5PEfC9h7C3aSwWUw" name="LiteralUnlimitedNatural1" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_c3GEkM5FEfCMkp374_T-Sw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_c3GroM5FEfCMkp374_T-Sw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_oRSdsM5KEfCF35oGXX2VfQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oRTEwM5KEfCF35oGXX2VfQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+  </uml:Model>
+  <SpringProfile:Entity xmi:id="_7zhV8M5EEfCMkp374_T-Sw" base_Class="_JBH1IM5EEfCMkp374_T-Sw"/>
+  <SpringProfile:Entity xmi:id="_C5ItwM5FEfCMkp374_T-Sw" base_Class="_BbN-QM5FEfCMkp374_T-Sw"/>
+  <Codegen:GeneratorHint xmi:id="_oRhHMM5KEfCF35oGXX2VfQ" base_Element="_4115UM5DEfCi8YUAud3MBg" generatorID="Standard Java">
+    <language xmi:type="Codegen:Language" href="pathmap://Codegen_PROFILES/languages.uml#_2Zt6YCjREeayco6FJ_OtTQ"/>
+  </Codegen:GeneratorHint>
+</xmi:XMI>
