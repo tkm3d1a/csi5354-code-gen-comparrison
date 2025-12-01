@@ -19,12 +19,17 @@ NC='\033[0m' # No Color
 # Defaults
 TARGET_DIR="."
 NO_COLOR=false
+ANALYSIS_OUTPUT=false
 
 # Parse arguments
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --no-color)
             NO_COLOR=true
+            shift
+            ;;
+        --analysis-output)
+            ANALYSIS_OUTPUT=true
             shift
             ;;
         --help|-h)
@@ -51,6 +56,20 @@ done
 # Apply no-color if set
 if [[ "$NO_COLOR" == true ]]; then
     RED=''; GREEN=''; YELLOW=''; BLUE=''; CYAN=''; BOLD=''; NC=''
+fi
+
+# Initialize CSV files if analysis output is enabled
+if [[ "$ANALYSIS_OUTPUT" == true ]]; then
+    METRICS_CSV="analysis-metrics.csv"
+    IMPORTS_CSV="analysis-imports.csv"
+    ANNOTATIONS_CSV="analysis-annotations.csv"
+    PACKAGES_CSV="analysis-packages.csv"
+    
+    # Initialize with headers
+    echo "metric,value" > "$METRICS_CSV"
+    echo "import,count" > "$IMPORTS_CSV"
+    echo "annotation,count" > "$ANNOTATIONS_CSV"
+    echo "package,file_count" > "$PACKAGES_CSV"
 fi
 
 # Validate directory
@@ -113,6 +132,10 @@ TOTAL_JAVA_FILES=$(find . -name "*.java" -not -path "*/target/*" -not -path "*/.
 
 echo -e "${CYAN}Total Java Files:${NC}      $TOTAL_JAVA_FILES"
 
+if [[ "$ANALYSIS_OUTPUT" == true ]]; then
+    echo "total_java_files,$TOTAL_JAVA_FILES" >> "$METRICS_CSV"
+fi
+
 #==============================================================================
 # SECTION 3: Import Analysis
 #==============================================================================
@@ -139,6 +162,23 @@ find . -name "*.java" -not -path "*/target/*" -exec grep -h "^import " {} + 2>/d
         printf "  %5d  %s\n" "$count" "$import"
     done
 
+if [[ "$ANALYSIS_OUTPUT" == true ]]; then
+    echo "total_imports,$TOTAL_IMPORTS" >> "$METRICS_CSV"
+    echo "unique_imports,$UNIQUE_IMPORTS" >> "$METRICS_CSV"
+    echo "static_imports,$STATIC_IMPORTS" >> "$METRICS_CSV"
+    echo "java_imports,$JAVA_IMPORTS" >> "$METRICS_CSV"
+    echo "javax_imports,$JAVAX_IMPORTS" >> "$METRICS_CSV"
+    echo "spring_imports,$SPRING_IMPORTS" >> "$METRICS_CSV"
+    
+    # Detailed import list
+    find . -name "*.java" -not -path "*/target/*" -exec grep -h "^import " {} + 2>/dev/null \
+        | sed 's/import //' | sed 's/;//' \
+        | sort | uniq -c | sort -rn \
+        | while read count import; do
+            echo "$import,$count" >> "$IMPORTS_CSV"
+        done
+fi
+
 #==============================================================================
 # SECTION 4: Package Structure
 #==============================================================================
@@ -155,6 +195,18 @@ find . -name "*.java" -not -path "*/target/*" -exec grep -h "^package " {} + 2>/
     | while read pkg; do
         echo "  $pkg"
     done
+
+if [[ "$ANALYSIS_OUTPUT" == true ]]; then
+    echo "unique_packages,$UNIQUE_PACKAGES" >> "$METRICS_CSV"
+    
+    find . -name "*.java" -not -path "*/target/*" -exec grep -h "^package " {} + 2>/dev/null \
+        | sed 's/package //' | sed 's/;//' \
+        | sort -u \
+        | while read pkg; do
+            count=$(find . -name "*.java" -not -path "*/target/*" -exec grep -l "^package $pkg;" {} + 2>/dev/null | wc -l)
+            echo "$pkg,$count" >> "$PACKAGES_CSV"
+        done
+fi
 
 #==============================================================================
 # SECTION 5: Annotation Analysis
@@ -176,6 +228,22 @@ find . -name "*.java" -not -path "*/target/*" -exec grep -ohE "^\s*@\w+" {} + 2>
     | while read count annotation; do
         printf "  %5d  %s\n" "$count" "$annotation"
     done
+
+if [[ "$ANALYSIS_OUTPUT" == true ]]; then
+    echo "total_annotations,$TOTAL_ANNOTATIONS" >> "$METRICS_CSV"
+    echo "spring_annotations,$SPRING_ANNOT" >> "$METRICS_CSV"
+    echo "jpa_annotations,$JPA_ANNOT" >> "$METRICS_CSV"
+    echo "test_annotations,$TEST_ANNOT" >> "$METRICS_CSV"
+    echo "java_annotations,$JAVA_ANNOT" >> "$METRICS_CSV"
+    
+    # Detailed annotation list
+    find . -name "*.java" -not -path "*/target/*" -exec grep -ohE "^\s*@\w+" {} + 2>/dev/null \
+        | sed 's/^[[:space:]]*//' \
+        | sort | uniq -c | sort -rn \
+        | while read count annotation; do
+            echo "$annotation,$count" >> "$ANNOTATIONS_CSV"
+        done
+fi
 
 #==============================================================================
 # SECTION 6: Maven Dependencies (pom.xml)
@@ -210,6 +278,13 @@ else
     echo -e "${RED}No pom.xml found in root directory.${NC}"
 fi
 
+if [[ "$ANALYSIS_OUTPUT" == true ]]; then
+    echo "total_dependencies,$TOTAL_DEPS" >> "$METRICS_CSV"
+    echo "test_dependencies,$TEST_DEPS" >> "$METRICS_CSV"
+    echo "provided_dependencies,$PROVIDED_DEPS" >> "$METRICS_CSV"
+    echo "maven_plugins,$TOTAL_PLUGINS" >> "$METRICS_CSV"
+fi
+
 #==============================================================================
 # SUMMARY
 #==============================================================================
@@ -219,5 +294,13 @@ echo -e "${BOLD}${BLUE}║                         ANALYSIS COMPLETE            
 echo -e "${BOLD}${BLUE}╚══════════════════════════════════════════════════════════════════════╝${NC}"
 echo ""
 echo -e "${CYAN}Reports generated:${NC}"
-echo "  - cloc-detailed-report.txt (if cloc available)"
+echo "  - cloc-detailed-report.txt"
 echo ""
+
+if [[ "$ANALYSIS_OUTPUT" == true ]]; then
+    echo -e "${CYAN}CSV files generated:${NC}"
+    echo "  - $METRICS_CSV"
+    echo "  - $IMPORTS_CSV"
+    echo "  - $ANNOTATIONS_CSV"
+    echo "  - $PACKAGES_CSV"
+fi
