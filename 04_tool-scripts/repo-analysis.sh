@@ -194,7 +194,6 @@ find . -name "*.java" -not -path "*/target/*" -exec grep -h "^package " {} + 2>/
     done
 
 if [[ "$ANALYSIS_OUTPUT" == true ]]; then
-    echo "unique_packages,$UNIQUE_PACKAGES" >> "$METRICS_CSV"
     
     find . -name "*.java" -not -path "*/target/*" -exec grep -h "^package " {} + 2>/dev/null \
         | sed 's/package //' | sed 's/;//' \
