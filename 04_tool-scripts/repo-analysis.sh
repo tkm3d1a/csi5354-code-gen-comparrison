@@ -106,7 +106,24 @@ find . -name "*.java" -not -path "*/target/*" -exec grep -h "^import " {} + 2>/d
     done
 
 #==============================================================================
-# SECTION 4: Annotation Analysis
+# SECTION 4: Package Structure
+#==============================================================================
+echo ""
+echo -e "${BOLD}${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${BOLD}${GREEN}  PACKAGE STRUCTURE${NC}"
+echo -e "${BOLD}${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo ""
+
+echo -e "${YELLOW}Packages:${NC}"
+find . -name "*.java" -not -path "*/target/*" -exec grep -h "^package " {} + 2>/dev/null \
+    | sed 's/package //' | sed 's/;//' \
+    | sort -u \
+    | while read pkg; do
+        echo "  $pkg"
+    done
+
+#==============================================================================
+# SECTION 5: Annotation Analysis
 #==============================================================================
 echo ""
 echo -e "${BOLD}${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
@@ -127,7 +144,7 @@ find . -name "*.java" -not -path "*/target/*" -exec grep -ohE "^\s*@\w+" {} + 2>
     done
 
 #==============================================================================
-# SECTION 5: Maven Dependencies (pom.xml)
+# SECTION 6: Maven Dependencies (pom.xml)
 #==============================================================================
 echo ""
 echo -e "${BOLD}${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
