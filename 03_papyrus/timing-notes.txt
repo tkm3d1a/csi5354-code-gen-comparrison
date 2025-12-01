@@ -1,0 +1,5 @@
+Create base model entities: 27m18s
+Test Code gen setup: 9m22s
+Create full packge set: 40m32s 
+Generate final code: 1m52s
+Total time in tool: 79m06s
