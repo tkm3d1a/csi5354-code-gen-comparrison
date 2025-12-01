@@ -1,0 +1,117 @@
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                    REPOSITORY ANALYSIS REPORT                        ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+Analyzing: /home/tkdev34/code/csi5354-code-gen-comparrison/01_manual/RecipeProjectMan
+Timestamp: Sun Nov 30 11:25:48 PM EST 2025
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  LINES OF CODE ANALYSIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+github.com/AlDanial/cloc v 1.90  T=0.01 s (1887.3 files/s, 118493.1 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Java                            10             65              0            264
+Bourne Shell                     1             32             52            211
+DOS Batch                        1             24              0            165
+Maven                            1              3              0             60
+YAML                             1              0              0              3
+-------------------------------------------------------------------------------
+SUM:                            14            124             52            703
+-------------------------------------------------------------------------------
+
+Detailed file report saved to: cloc-detailed-report.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  JAVA FILE STATISTICS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Total Java Files:      10
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  IMPORT ANALYSIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Total Import Statements:   26
+Unique Imports:            14
+Static Imports:            0
+
+Top 10 Most Used Imports:
+      4  java.util.List
+      3  com.tkforgeworks.RecipeProject.model.User
+      3  com.tkforgeworks.RecipeProject.model.Recipe
+      2  org.springframework.web.bind.annotation.*
+      2  org.springframework.stereotype.Service
+      2  org.springframework.stereotype.Repository
+      2  org.springframework.data.jpa.repository.JpaRepository
+      2  jakarta.persistence.*
+      1  org.springframework.boot.SpringApplication
+      1  org.springframework.boot.autoconfigure.SpringBootApplication
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PACKAGE STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Packages:
+  com.tkforgeworks.RecipeProject
+  com.tkforgeworks.RecipeProject.controller
+  com.tkforgeworks.RecipeProject.model
+  com.tkforgeworks.RecipeProject.repository
+  com.tkforgeworks.RecipeProject.service
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ANNOTATION ANALYSIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Total Annotation Lines:    29
+
+Top 15 Annotations Used:
+      4  @GetMapping
+      2  @Service
+      2  @RestController
+      2  @RequestMapping
+      2  @Repository
+      2  @PutMapping
+      2  @PostMapping
+      2  @Override
+      2  @Id
+      2  @GeneratedValue
+      2  @Entity
+      2  @DeleteMapping
+      1  @Table
+      1  @SpringBootApplication
+      1  @OneToOne
+Annotation Breakdown by Category:
+  Spring Framework:          18
+  JPA/Hibernate:             8
+  Standard Java:             2
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  MAVEN DEPENDENCY ANALYSIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Total Dependencies:        4
+Maven Plugins:             1
+
+Dependencies List:
+  org.springframework.boot:spring-boot-starter-data-jpa
+  org.springframework.boot:spring-boot-starter-web
+  com.h2database:h2
+  org.springframework.boot:spring-boot-starter-test
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                         ANALYSIS COMPLETE                            ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+Reports generated:
+  - cloc-detailed-report.txt
+
+CSV files generated:
+  - analysis-metrics.csv
+  - analysis-imports.csv
+  - analysis-annotations.csv
+  - analysis-packages.csv
