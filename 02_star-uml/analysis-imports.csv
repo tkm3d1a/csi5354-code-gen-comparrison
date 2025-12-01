@@ -1,0 +1,10 @@
+java.util.*,8
+java.io.*,8
+model.User,2
+model.Recipe,2
+service.UserService,1
+service.RecipeService,1
+repository.UserRepository,1
+repository.RecipeRepository,1
+org.springframework.boot.SpringApplication,1
+org.springframework.boot.autoconfigure.SpringBootApplication,1

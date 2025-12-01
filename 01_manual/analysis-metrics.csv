@@ -1,0 +1,10 @@
+total_java_files,10
+total_imports,26
+unique_imports,14
+static_imports,0
+total_annotations,29
+spring_annotations,18
+jpa_annotations,8
+java_annotations,2
+total_dependencies,4
+maven_plugins,1

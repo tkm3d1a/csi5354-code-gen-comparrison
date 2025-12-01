@@ -1,0 +1,14 @@
+java.util.List,4
+com.tkforgeworks.RecipeProject.model.User,3
+com.tkforgeworks.RecipeProject.model.Recipe,3
+org.springframework.web.bind.annotation.*,2
+org.springframework.stereotype.Service,2
+org.springframework.stereotype.Repository,2
+org.springframework.data.jpa.repository.JpaRepository,2
+jakarta.persistence.*,2
+org.springframework.boot.SpringApplication,1
+org.springframework.boot.autoconfigure.SpringBootApplication,1
+com.tkforgeworks.RecipeProject.service.UserService,1
+com.tkforgeworks.RecipeProject.service.RecipeService,1
+com.tkforgeworks.RecipeProject.repository.UserRepository,1
+com.tkforgeworks.RecipeProject.repository.RecipeRepository,1

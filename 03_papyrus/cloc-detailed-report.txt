@@ -1,0 +1,21 @@
+github.com/AlDanial/cloc v 1.90  T=0.01 s (1778.6 files/s, 135939.5 lines/s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+File                                                                                                                          blank        comment           code
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+./mvnw                                                                                                                           32             52            211
+./mvnw.cmd                                                                                                                       24              0            165
+./pom.xml                                                                                                                         3              0             60
+./src/main/java/com/tkforgeworks/RecipeProject/com.tkforgeworks.RecipeProject.model/Recipe.java                                  14             68             31
+./src/main/java/com/tkforgeworks/RecipeProject/com.tkforgeworks.RecipeProject.controller/RecipeController.java                    9             39             19
+./src/main/java/com/tkforgeworks/RecipeProject/com.tkforgeworks.RecipeProject.controller/UserController.java                      9             39             19
+./src/main/java/com/tkforgeworks/RecipeProject/com.tkforgeworks.RecipeProject.service/RecipeService.java                          9             39             19
+./src/main/java/com/tkforgeworks/RecipeProject/com.tkforgeworks.RecipeProject.service/UserService.java                            9             39             19
+./src/main/java/com/tkforgeworks/RecipeProject/com.tkforgeworks.RecipeProject.model/User.java                                     8             41             18
+./src/main/java/com/tkforgeworks/RecipeProject/RecipeProjectApplication.java                                                      4              0              9
+./src/main/java/com/tkforgeworks/RecipeProject/com.tkforgeworks.RecipeProject.model/SkillLevel.java                               2             20              7
+./src/main/java/com/tkforgeworks/RecipeProject/com.tkforgeworks.RecipeProject.repository/RecipeRepository.java                    3              8              4
+./src/main/java/com/tkforgeworks/RecipeProject/com.tkforgeworks.RecipeProject.repository/UserRepository.java                      3              8              4
+./src/main/resources/application.yaml                                                                                             0              0              3
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+SUM:                                                                                                                            129            353            588
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------

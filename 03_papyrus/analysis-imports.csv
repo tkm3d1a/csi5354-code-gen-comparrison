@@ -1,0 +1,9 @@
+java.util.List,4
+RecipeProject.com.tkforgeworks.RecipeProject.model.User,3
+RecipeProject.com.tkforgeworks.RecipeProject.model.Recipe,3
+RecipeProject.com.tkforgeworks.RecipeProject.service.UserService,1
+RecipeProject.com.tkforgeworks.RecipeProject.service.RecipeService,1
+RecipeProject.com.tkforgeworks.RecipeProject.repository.UserRepository,1
+RecipeProject.com.tkforgeworks.RecipeProject.repository.RecipeRepository,1
+org.springframework.boot.SpringApplication,1
+org.springframework.boot.autoconfigure.SpringBootApplication,1
