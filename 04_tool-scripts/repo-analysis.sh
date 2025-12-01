@@ -16,8 +16,42 @@ CYAN='\033[0;36m'
 BOLD='\033[1m'
 NC='\033[0m' # No Color
 
-# Target directory (default to current directory)
-TARGET_DIR="${1:-.}"
+# Defaults
+TARGET_DIR="."
+NO_COLOR=false
+
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --no-color)
+            NO_COLOR=true
+            shift
+            ;;
+        --help|-h)
+            echo "Usage: repo-analysis.sh [OPTIONS] [DIRECTORY]"
+            echo ""
+            echo "Options:"
+            echo "  --no-color    Disable colored output"
+            echo "  --help, -h    Show this help message"
+            echo ""
+            echo "If no directory is specified, the current directory is used."
+            exit 0
+            ;;
+        -*)
+            echo "Unknown option: $1"
+            exit 1
+            ;;
+        *)
+            TARGET_DIR="$1"
+            shift
+            ;;
+    esac
+done
+
+# Apply no-color if set
+if [[ "$NO_COLOR" == true ]]; then
+    RED=''; GREEN=''; YELLOW=''; BLUE=''; CYAN=''; BOLD=''; NC=''
+fi
 
 # Validate directory
 if [[ ! -d "$TARGET_DIR" ]]; then
